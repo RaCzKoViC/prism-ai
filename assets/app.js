@@ -7,7 +7,7 @@
 'use strict';
 
 const LS_KEY   = 'prismai.v1';
-const IMG_MODEL = 'gpt-image-1';   // Vision studio image model
+// Vision uses Puter's default (free) image model; set an id here to override.
 
 // Curated, currently-valid Puter model catalogue (fast/free-friendly first)
 const MODELS = [
@@ -347,7 +347,8 @@ function buildImage(img, msg){
   (async()=>{
     try{
       if(!puterReady()) throw new Error('AI engine still loading \u2014 try again in a second.');
-      const res = await puter.ai.txt2img(img.prompt, { model: img.model || IMG_MODEL });
+      const res = img.model ? await puter.ai.txt2img(img.prompt, { model: img.model })
+                            : await puter.ai.txt2img(img.prompt);   // Puter default (free-tier) model
       const src = (res && res.src) ? res.src : (typeof res==='string'? res : (res && res.toString ? res.toString() : ''));
       if(!src || src.length<10) throw new Error('no image returned');
       img.dataUrl = src;
@@ -401,7 +402,7 @@ async function send(){
   if(a.mode==='image' || imgCmd){
     const prompt = imgCmd ? imgCmd[1].trim() : text;
     pushMessage(chat,{role:'user',content: imgCmd?('/image '+prompt):prompt});
-    const imgMsg = {role:'assistant', content:'', image:{prompt, model:IMG_MODEL}};
+    const imgMsg = {role:'assistant', content:'', image:{prompt}};
     pushMessage(chat,imgMsg);
     if(chat.title==='New chat'){ chat.title = prompt.slice(0,42); }
     save(); renderSidebar(); renderChat();
@@ -526,7 +527,7 @@ function regenerate(){
   const a = byId(chat.assistantId);
   if(a.mode==='image' || (lastUser.content||'').match(/^\/(?:image|img|imagine)\s+/i)){
     const prompt = (lastUser.content||'').replace(/^\/(?:image|img|imagine)\s+/i,'');
-    const imgMsg = {role:'assistant',content:'',image:{prompt,model:IMG_MODEL}};
+    const imgMsg = {role:'assistant',content:'',image:{prompt}};
     pushMessage(chat,imgMsg); save(); renderChat(); return;
   }
   const assistantMsg={role:'assistant',content:'',reasoning:''};
