@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Prism AI — Free Advanced AI Tools for Everyone</title>
+<meta name="description" content="Prism AI is a free, no-login platform giving everyone access to advanced AI assistants — chat, coding, defensive security, research, writing, and image generation. Powered by open models." />
+<meta name="theme-color" content="#0a0b12" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%237c5cff'/%3E%3Cstop offset='1' stop-color='%2300d4ff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M50 8 L86 30 V70 L50 92 L14 70 V30 Z' fill='none' stroke='url(%23g)' stroke-width='7' stroke-linejoin='round'/%3E%3Cpath d='M50 30 L68 50 L50 70 L32 50 Z' fill='url(%23g)'/%3E%3C/svg%3E" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css" />
+<link rel="stylesheet" href="assets/styles.css?v=1" />
+</head>
+<body>
+
+<!-- ======================= LANDING ======================= -->
+<div id="landing" class="landing">
+  <header class="lp-nav">
+    <a class="brand" href="#" aria-label="Prism AI home">
+      <svg class="brand-mark" viewBox="0 0 100 100" aria-hidden="true">
+        <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#7c5cff"/><stop offset="1" stop-color="#00d4ff"/>
+        </linearGradient></defs>
+        <path d="M50 8 L86 30 V70 L50 92 L14 70 V30 Z" fill="none" stroke="url(#bg)" stroke-width="7" stroke-linejoin="round"/>
+        <path d="M50 30 L68 50 L50 70 L32 50 Z" fill="url(#bg)"/>
+      </svg>
+      <span class="brand-name">Prism<span class="brand-ai">AI</span></span>
+    </a>
+    <nav class="lp-links">
+      <a href="#assistants">Assistants</a>
+      <a href="#features">Features</a>
+      <a href="#pricing">Pricing</a>
+      <a class="gh" href="https://github.com/RaCzKoViC/prism-ai" target="_blank" rel="noopener" data-gh-link>GitHub</a>
+    </nav>
+    <button class="btn btn-primary lp-cta" data-enter-app>Launch App →</button>
+  </header>
+
+  <main class="lp-hero">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <div class="pill">✦ 100% free · No API keys · Frontier + open models</div>
+      <h1 class="hero-title">Advanced AI tools,<br><span class="grad">free for everyone.</span></h1>
+      <p class="hero-sub">
+        A whole team of specialized AI assistants in one place — for coding, defensive security,
+        research, writing, and image generation. No API keys, no paywall, no token meter.
+        Just open it and go.
+      </p>
+      <div class="hero-actions">
+        <button class="btn btn-primary btn-lg" data-enter-app>Start chatting free</button>
+        <a class="btn btn-ghost btn-lg" href="#assistants">Meet the assistants</a>
+      </div>
+      <div class="hero-stats">
+        <div><b id="stat-assistants">6</b><span>Specialist assistants</span></div>
+        <div><b>0</b><span>Cost, forever</span></div>
+        <div><b>∞</b><span>Messages</span></div>
+      </div>
+    </div>
+  </main>
+
+  <section id="assistants" class="lp-section">
+    <h2 class="section-title">A specialist for every job</h2>
+    <p class="section-sub">Each assistant is tuned with its own expertise and personality. Switch anytime — your chat comes with you.</p>
+    <div id="assistant-grid" class="assistant-grid"><!-- injected --></div>
+  </section>
+
+  <section id="features" class="lp-section alt">
+    <h2 class="section-title">Everything you'd expect — and it's free</h2>
+    <div class="feature-grid">
+      <div class="feature"><div class="fi">⚡</div><h3>Real-time streaming</h3><p>Answers appear token-by-token, just like the tools you pay for.</p></div>
+      <div class="feature"><div class="fi">🎨</div><h3>Image generation</h3><p>Turn a prompt into artwork in seconds with the Vision studio.</p></div>
+      <div class="feature"><div class="fi">💾</div><h3>Saved locally</h3><p>Every conversation stays in your browser — private, always there when you return.</p></div>
+      <div class="feature"><div class="fi">🧩</div><h3>Markdown &amp; code</h3><p>Rich formatting, syntax highlighting, and one-click copy on every code block.</p></div>
+      <div class="feature"><div class="fi">🔑</div><h3>No API keys</h3><p>No keys to paste, no billing to set up. One tap to start and you're chatting.</p></div>
+      <div class="feature"><div class="fi">📱</div><h3>Works everywhere</h3><p>Fully responsive — desktop, tablet, and phone, in a single link.</p></div>
+    </div>
+  </section>
+
+  <section id="pricing" class="lp-section">
+    <h2 class="section-title">Pricing</h2>
+    <p class="section-sub">This is the whole table.</p>
+    <div class="price-wrap">
+      <div class="price-card featured">
+        <div class="price-tag">Free</div>
+        <div class="price-amt">$0<span>/forever</span></div>
+        <ul>
+          <li>✓ All 6 specialist assistants</li>
+          <li>✓ Unlimited messages</li>
+          <li>✓ Streaming responses</li>
+          <li>✓ Image generation</li>
+          <li>✓ Local, private history</li>
+          <li>✓ No API keys, no billing</li>
+        </ul>
+        <button class="btn btn-primary btn-lg full" data-enter-app>Launch Prism AI</button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="lp-footer">
+    <div class="brand small">
+      <svg class="brand-mark" viewBox="0 0 100 100" aria-hidden="true">
+        <path d="M50 8 L86 30 V70 L50 92 L14 70 V30 Z" fill="none" stroke="url(#bg)" stroke-width="7" stroke-linejoin="round"/>
+        <path d="M50 30 L68 50 L50 70 L32 50 Z" fill="url(#bg)"/>
+      </svg>
+      <span class="brand-name">Prism<span class="brand-ai">AI</span></span>
+    </div>
+    <p>Free &amp; open. Built for teams and individuals who want capable AI without a paywall.<br>
+    Powered by frontier &amp; open models via <a href="https://puter.com" target="_blank" rel="noopener" style="color:var(--brand2)">Puter</a>. Not affiliated with any commercial AI vendor.</p>
+    <p class="fine">Use responsibly and lawfully. The security assistant is for <b>defensive</b> and educational use only.</p>
+  </footer>
+</div>
+
+<!-- ======================= APP ======================= -->
+<div id="app" class="app hidden">
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sb-head">
+      <a class="brand" data-home href="#" aria-label="Home">
+        <svg class="brand-mark" viewBox="0 0 100 100" aria-hidden="true">
+          <path d="M50 8 L86 30 V70 L50 92 L14 70 V30 Z" fill="none" stroke="url(#bg)" stroke-width="7" stroke-linejoin="round"/>
+          <path d="M50 30 L68 50 L50 70 L32 50 Z" fill="url(#bg)"/>
+        </svg>
+        <span class="brand-name">Prism<span class="brand-ai">AI</span></span>
+      </a>
+      <button class="icon-btn" id="sb-close" title="Close sidebar" aria-label="Close sidebar">✕</button>
+    </div>
+
+    <button class="btn btn-primary new-chat" id="new-chat">＋ New chat</button>
+
+    <div class="sb-section-label">Assistant</div>
+    <div class="assistant-mini" id="assistant-mini"><!-- current assistant --></div>
+    <button class="assistant-switch" id="assistant-switch">Switch assistant ▾</button>
+
+    <div class="sb-section-label">History</div>
+    <div class="chat-list" id="chat-list"><!-- chats --></div>
+
+    <div class="sb-foot">
+      <button class="foot-btn" id="clear-all" title="Delete all conversations">🗑 Clear all</button>
+      <a class="foot-btn" data-home href="#">← Landing</a>
+    </div>
+  </aside>
+  <div class="sb-backdrop" id="sb-backdrop"></div>
+
+  <!-- Main -->
+  <main class="main">
+    <header class="topbar">
+      <button class="icon-btn" id="sb-open" title="Menu" aria-label="Open sidebar">☰</button>
+      <div class="topbar-assistant" id="topbar-assistant"></div>
+      <div class="topbar-right">
+        <select id="model-select" class="model-select" title="Model"></select>
+        <button class="icon-btn" id="export-chat" title="Export conversation">⬇</button>
+      </div>
+    </header>
+
+    <div class="chat-scroll" id="chat-scroll">
+      <div class="messages" id="messages"><!-- messages --></div>
+      <div class="empty-state" id="empty-state">
+        <div class="empty-avatar" id="empty-avatar"></div>
+        <h2 id="empty-title">How can I help?</h2>
+        <p id="empty-desc"></p>
+        <div class="suggestions" id="suggestions"></div>
+      </div>
+    </div>
+
+    <div class="composer-wrap">
+      <div class="composer">
+        <textarea id="input" class="composer-input" rows="1" placeholder="Message Prism AI…" autocomplete="off"></textarea>
+        <div class="composer-actions">
+          <button class="send-btn" id="send-btn" title="Send" aria-label="Send message">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M3.4 20.4l17.45-7.48a1 1 0 000-1.84L3.4 3.6a1 1 0 00-1.39 1.19L4.2 11.5l10.3.5-10.3.5-2.19 6.71A1 1 0 003.4 20.4z"/></svg>
+          </button>
+          <button class="send-btn stop" id="stop-btn" title="Stop" aria-label="Stop generating" hidden>
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2" fill="currentColor"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="composer-hint">Prism AI can make mistakes. Verify important info. <span class="dot">·</span> Free — powered by Puter.</div>
+    </div>
+  </main>
+</div>
+
+<!-- Assistant picker modal -->
+<div class="modal-backdrop hidden" id="picker-backdrop">
+  <div class="modal" role="dialog" aria-modal="true" aria-label="Choose an assistant">
+    <div class="modal-head">
+      <h3>Choose an assistant</h3>
+      <button class="icon-btn" id="picker-close" aria-label="Close">✕</button>
+    </div>
+    <div class="picker-grid" id="picker-grid"></div>
+  </div>
+</div>
+
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+<!-- shared gradient def for app-side SVGs -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7c5cff"/><stop offset="1" stop-color="#00d4ff"/></linearGradient>
+</defs></svg>
+
+<script src="https://js.puter.com/v2/"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.11/purify.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="assets/app.js?v=1"></script>
+</body>
+</html>

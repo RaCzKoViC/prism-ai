@@ -1,0 +1,7 @@
+# Local editor / preview config (machine-specific absolute paths)
+.claude/
+# OS junk
+Thumbs.db
+.DS_Store
+# Node (none used, but just in case)
+node_modules/
